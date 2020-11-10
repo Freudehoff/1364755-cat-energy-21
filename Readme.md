@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Вячеслав Жубрин](https://up.htmlacademy.ru/adaptive/21/user/1364755).
-* Наставник: `Неизвестно`.
+- Студент: [Вячеслав Жубрин](https://up.htmlacademy.ru/adaptive/21/user/1364755).
+- Наставник: [Алексей Удод](https://up.htmlacademy.ru/adaptive/21/user/523387).
 
 ---
 
