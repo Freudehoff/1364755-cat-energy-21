@@ -1,8 +1,33 @@
+.example {
+  background-color: @special-grey;
+
+  @media (min-width: @tablet-width) {
+    background-color: @basic-white;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.example__wrapper {
+  @media (min-width: @desktop-width) {
+    width: 450px;
+  }
+}
+
 .example__heading {
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
   color: @basic-black;
+}
+
+.example__item {
+  display: inline-block;
+  width: 125px;
+  height: 70px;
 }
 
 .example__quantity {
@@ -19,6 +44,7 @@
 }
 
 .example__cost {
+  display: inline-block;
   line-height: 20px;
   text-transform: uppercase;
   color: @basic-black;
@@ -29,4 +55,12 @@
   line-height: 20px;
   text-transform: uppercase;
   color: @basic-black;
+
+  @media (min-width: @tablet-width) {
+    background-color: @special-grey;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 625px;
+  }
 }

@@ -4,3 +4,13 @@
   font-weight: 400;
   color: @basic-black;
 }
+
+.features__list {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width), (min-width: @desktop-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
