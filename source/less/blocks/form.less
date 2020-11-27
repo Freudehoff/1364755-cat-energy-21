@@ -1,3 +1,10 @@
+.form__wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
 .form__item {
   font-size: 16px;
   text-transform: uppercase;
@@ -10,9 +17,53 @@
 .form__item-title {
   font-size: 24px;
   line-height: 26px;
+  text-transform: none;
   color: @basic-black;
 }
 
-.form__extra {
+.title-contacts {
+  display: block;
+  width: 187px;
+
+  @media (min-width: @tablet-width) {
+    width: 512px;
+  }
+}
+
+.contacts-wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.form-additionally {
   color: @basic-black;
+}
+
+.additionally-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+  }
+}
+
+.additionally-option {
+  width: 280px;
+}
+
+.form__button {
+  width: 280px;
+}
+
+.form__required {
+  line-height: 16px;
+  color: @basic-black;
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+  }
 }
