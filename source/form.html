@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Подбор программы</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -10,13 +11,13 @@
 <body class="page__body">
   <header class="page-header">
     <nav class="main-navigation">
-      <a class="main-navigation__logo-first" href="index.html">
-        <img src="https://via.placeholder.com/33x37" alt="Интернет магазин «Кэт энерджи»">
-      </a>
-      <a class="main-navigation__logo-second" href="index.html">
-        <img src="https://via.placeholder.com/101x18" alt="Интернет магазин «Кэт энерджи»">
-      </a>
-      <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <div class="main-navigation__wrapper">
+        <a class="main-navigation__logo" href="index.html">
+          <img src="https://via.placeholder.com/33x37" width="33" height="37" alt="Интернет магазин «Кэт энерджи»">
+          <img src="https://via.placeholder.com/101x18" width="101" height="18" alt="Интернет магазин «Кэт энерджи»">
+        </a>
+        <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      </div>
       <ul class="main-navigation__list list">
         <li class="main-navigation__item">
           <a class="list__link" href="index.html">Главная</a>
@@ -34,71 +35,77 @@
     <h1 class="page-title">Подбор программы</h1>
     <p class="page-main__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
     <form class="page-main__form form" action="https://echo.htmlacademy.ru" method="post">
-      <div class="form__item">
-        <p class="form__option">
-          <label class="form__option-title" for="name">Имя:*</label>
-          <input class="form__option-field" type="text" name="characteristics" id="name" value="Барсик" required>
-        </p>
-        <p class="form__option">
-          <label class="form__option-title" for="weight">Вес (кг):*</label>
-          <input class="form__option-field" type="text" name="characteristics" id="weight" value="7" required>
-        </p>
-        <p class="form__option">
-          <label class="form__option-title" for="age">Возраст (лет):</label>
-          <input class="form__option-field" type="text" name="characteristics" id="age" value="7">
-        </p>
+      <div class="form__wrapper">
+        <div class="form__item">
+          <p class="form__option">
+            <label class="form__option-title" for="name">Имя:*</label>
+            <input class="form__option-field" type="text" name="characteristics" id="name" value="Барсик" required>
+          </p>
+          <p class="form__option">
+            <label class="form__option-title" for="weight">Вес (кг):*</label>
+            <input class="form__option-field" type="text" name="characteristics" id="weight" value="7" required>
+          </p>
+          <p class="form__option">
+            <label class="form__option-title" for="age">Возраст (лет):</label>
+            <input class="form__option-field" type="text" name="characteristics" id="age" value="7">
+          </p>
+        </div>
+        <div class="form__item wish">
+          <p class="form__option">
+            <input class="form__option-radio" type="radio" name="weight" id="slimming" value="slimming" checked>
+            <label class="form__option-title" for="slimming">Похудение</label>
+          </p>
+          <p class="form__option">
+            <input class="form__option-radio" type="radio" name="weight" id="gain" value="gain">
+            <label class="form__option-title" for="gain">Набор массы</label>
+          </p>
+          <p class="form__option">
+            <input class="form__option-radio" type="radio" name="weight" id="dontknow" value="dontknow">
+            <label class="form__option-title" for="dontknow">Не знаю (Нужен ваш совет)</label>
+          </p>
+        </div>
       </div>
-      <div class="form__item wish">
-        <p class="form__option">
-          <input class="form__option-radio" type="radio" name="weight" id="slimming" value="slimming" checked>
-          <label class="form__option-title" for="slimming">Похудение</label>
-        </p>
-        <p class="form__option">
-          <input class="form__option-radio" type="radio" name="weight" id="gain" value="gain">
-          <label class="form__option-title" for="gain">Набор массы</label>
-        </p>
-        <p class="form__option">
-          <input class="form__option-radio" type="radio" name="weight" id="dontknow" value="dontknow">
-          <label class="form__option-title" for="dontknow">Не знаю (Нужен ваш совет)</label>
-        </p>
-      </div>
       <div class="form__item">
-        <span class="form__item-title">Контактные данные (владельца кота)</span>
-        <p class="form__option">
-          <label class="form__option-title" for="email">E-mail:*</label>
-          <input class="form__option-field" type="email" name="contact" id="email" value="kuklachev@gmail.com" required>
-        </p>
-        <p class="form__option">
-          <label class="form__option-title" for="tel">Телефон:*</label>
-          <input class="form__option-field" type="tel" name="contact" id="tel" value="8 (960) 900-60-90" required>
-        </p>
+        <span class="form__item-title title-contacts">Контактные данные (владельца кота)</span>
+        <div class="contacts-wrapper">
+          <p class="form__option">
+            <label class="form__option-title" for="email">E-mail:*</label>
+            <input class="form__option-field" type="email" name="contact" id="email" value="kuklachev@gmail.com" required>
+          </p>
+          <p class="form__option">
+            <label class="form__option-title" for="tel">Телефон:*</label>
+            <input class="form__option-field" type="tel" name="contact" id="tel" value="8 (960) 900-60-90" required>
+          </p>
+        </div>
       </div>
       <div class="form__item">
         <label class="form__item-title" for="comment">Комментарий</label><br>
         <textarea class="form__item-field" name="comment" id="comment" cols="30" rows="10">Расскажите обо всех повадках кота</textarea>
       </div>
-      <div class="form__item form__extra">
+      <div class="form__item form-additionally">
         <span class="form__item-title">Дополнительно</span>
-        <p class="form__option">
-          <input class="form__option-checkbox" type="checkbox" name="extra" id="sweetener" checked>
-          <label class="form__option-title" for="sweetener">Сахарозаменитель</label>
-        </p>
-        <p class="form__option">
-          <input class="form__option-checkbox" type="checkbox" name="extra" id="water">
-          <label class="form__option-title" for="water">Питьевая вода</label>
-        </p>
-        <p class="form__option">
-          <input class="form__option-checkbox" type="checkbox" name="extra" id="milk">
-          <label class="form__option-title" for="milk">Молоко</label>
-        </p>
-        <p class="form__option">
-          <input class="form__option-checkbox" type="checkbox" name="extra" id="vitamins">
-          <label class="form__option-title" for="vitamins">Витамины</label>
-        </p>
+        <div class="additionally-wrapper">
+          <p class="form__option additionally-option">
+            <input class="form__option-checkbox" type="checkbox" name="extra" id="sweetener" checked>
+            <label class="form__option-title" for="sweetener">Сахарозаменитель</label>
+          </p>
+          <p class="form__option additionally-option">
+            <input class="form__option-checkbox" type="checkbox" name="extra" id="water">
+            <label class="form__option-title" for="water">Питьевая вода</label>
+          </p>
+          <p class="form__option additionally-option">
+            <input class="form__option-checkbox" type="checkbox" name="extra" id="milk">
+            <label class="form__option-title" for="milk">Молоко</label>
+          </p>
+          <p class="form__option additionally-option">
+            <input class="form__option-checkbox" type="checkbox" name="extra" id="vitamins">
+            <label class="form__option-title" for="vitamins">Витамины</label>
+          </p>
+        </div>
       </div>
       <button class="form__button button" type="button">Отправить заявку</button>
+      <p class="form__required">* — Обязательные поля</p>
     </form>
-    <span class="page-main__required">* — Обязательные поля</span>
   </main>
   <footer class="page-footer">
     <section class="contacts">
@@ -111,7 +118,7 @@
     </section>
     <div class="page-footer__wrapper">
       <div class="page-footer__logo">
-        <img src="https://via.placeholder.com/128x24" alt="Интернет магазин «Кэт энерджи»">
+        <img src="https://via.placeholder.com/128x24" width="128" height="24" alt="Интернет магазин «Кэт энерджи»">
       </div>
       <section class="social">
         <h2 class="visually-hidden">Давайте дружить!</h2>
@@ -131,7 +138,7 @@
         <h2 class="visually-hidden">Разработано</h2>
         <a class="copyright__button" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
           <span>HTML Academy</span>
-          <img src="https://via.placeholder.com/27x34" alt="Логотип HTML Academy">
+          <img src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип HTML Academy">
         </a>
       </section>
     </div>
