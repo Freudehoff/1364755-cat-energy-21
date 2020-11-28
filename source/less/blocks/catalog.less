@@ -5,6 +5,22 @@
   color: @basic-black;
 }
 
+.catalog__list {
+  display: grid;
+  grid-template-columns: 280px;
+  grid-template-rows: 1fr;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 324px 324px;
+    gap: 140px 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 245px 245px 245px 245px;
+    gap: 144px 80px;
+  }
+}
+
 .catalog-link {
   text-decoration: none;
 }
@@ -24,10 +40,6 @@
 }
 
 .plus-title {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
-  text-transform: uppercase;
   color: @special-black;
 }
 

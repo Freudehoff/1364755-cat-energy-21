@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Каталог продукции</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -10,13 +11,13 @@
 <body class="page__body">
   <header class="page-header">
     <nav class="main-navigation">
-      <a class="main-navigation__logo-first" href="index.html">
-        <img src="https://via.placeholder.com/33x37" alt="Интернет магазин «Кэт энерджи»">
-      </a>
-      <a class="main-navigation__logo-second" href="index.html">
-        <img src="https://via.placeholder.com/101x18" alt="Интернет магазин «Кэт энерджи»">
-      </a>
-      <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <div class="main-navigation__wrapper">
+        <a class="main-navigation__logo" href="index.html">
+          <img src="https://via.placeholder.com/33x37" width="33" height="37" alt="Интернет магазин «Кэт энерджи»">
+          <img src="https://via.placeholder.com/101x18" width="101" height="18" alt="Интернет магазин «Кэт энерджи»">
+        </a>
+        <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      </div>
       <ul class="main-navigation__list list">
         <li class="main-navigation__item">
           <a class="list__link" href="index.html">Главная</a>
@@ -195,53 +196,55 @@
           </table>
           <button class="catalog-item-button button" type="button">Заказать</button>
         </li>
+        <li class="catalog__item plus-item">
+          <h2 class="catalog-item-title plus-title">Показать еще 100500 товаров</h2>
+          <p class="plus-text">На самом деле вкусов гораздо больше!</p>
+          <a class="plus-button" href="#">Показать все</a>
+        </li>
       </ul>
-      <div class="catalog__plus">
-        <h2 class="plus-title">Показать еще 100500 товаров</h2>
-        <p class="plus-text">На самом деле вкусов гораздо больше!</p>
-        <a class="plus-button" href="#">Показать все</a>
-      </div>
     </section>
     <section class="extra">
       <h3 class="extra__title">Дополнительные товары</h3>
-      <ul class="extra__list list">
-        <li class="extra-list-item">
-          <a class="extra-link" href="#">
-            <h4 class="extra-item-title">Сахарозаменитель</h4>
-          </a>
-          <span class="extra-item-quantity">1 упаковка (100 г)</span>
-          <span class="extra-item-price">200 Р.</span>
-          <button class="extra-item-button button" type="button">Заказать</button>
-        </li>
-        <li class="extra-list-item">
-          <a class="extra-link" href="#">
-            <h4 class="extra-item-title">Питьевая вода</h4>
-          </a>
-          <span class="extra-item-quantity">5 литров</span>
-          <span class="extra-item-price">50 Р.</span>
-          <button class="extra-item-button button" type="button">Заказать</button>
-        </li>
-        <li class="extra-list-item">
-          <a class="extra-link" href="#">
-            <h4 class="extra-item-title">Молоко</h4>
-          </a>
-          <span class="extra-item-quantity">1 литр</span>
-          <span class="extra-item-price">100 Р.</span>
-          <button class="extra-item-button button" type="button">Заказать</button>
-        </li>
-        <li class="extra-list-item">
-          <a class="extra-link" href="#">
-            <h4 class="extra-item-title">Витамины</h4>
-          </a>
-          <span class="extra-item-quantity">1 упаковка (30 г)</span>
-          <span class="extra-item-price">300 Р.</span>
-          <button class="extra-item-button button" type="button">Заказать</button>
-        </li>
-      </ul>
-    </section>
-    <section class="gift">
-      <h3 class="visually-hidden">Подарок</h3>
-      <p class="gift__text">Закажите все и получите чехол для кота в подарок!</p>
+      <div class="extra__wrapper">
+        <ul class="extra__list list">
+          <li class="extra-list-item">
+            <a class="extra-link" href="#">
+              <h4 class="extra-item-title">Сахарозаменитель</h4>
+            </a>
+            <span class="extra-item-quantity">1 упаковка (100 г)</span>
+            <span class="extra-item-price">200 Р.</span>
+            <button class="extra-item-button button" type="button">Заказать</button>
+          </li>
+          <li class="extra-list-item">
+            <a class="extra-link" href="#">
+              <h4 class="extra-item-title">Питьевая вода</h4>
+            </a>
+            <span class="extra-item-quantity">5 литров</span>
+            <span class="extra-item-price">50 Р.</span>
+            <button class="extra-item-button button" type="button">Заказать</button>
+          </li>
+          <li class="extra-list-item">
+            <a class="extra-link" href="#">
+              <h4 class="extra-item-title">Молоко</h4>
+            </a>
+            <span class="extra-item-quantity">1 литр</span>
+            <span class="extra-item-price">100 Р.</span>
+            <button class="extra-item-button button" type="button">Заказать</button>
+          </li>
+          <li class="extra-list-item">
+            <a class="extra-link" href="#">
+              <h4 class="extra-item-title">Витамины</h4>
+            </a>
+            <span class="extra-item-quantity">1 упаковка (30 г)</span>
+            <span class="extra-item-price">300 Р.</span>
+            <button class="extra-item-button button" type="button">Заказать</button>
+          </li>
+        </ul>
+        <div class="extra__gift">
+          <h3 class="visually-hidden">Подарок</h3>
+          <p class="gift-text">Закажите все и получите чехол для кота в подарок!</p>
+        </div>
+      </div>
     </section>
   </main>
   <footer class="page-footer">
