@@ -5,8 +5,21 @@
   color: @basic-black;
 }
 
+.extra__wrapper {
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
 .extra__list {
   line-height: 14px;
+}
+
+.extra-list-item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .extra-link {
@@ -14,9 +27,42 @@
 }
 
 .extra-item-title {
+  min-width: 280px;
+  margin: 0;
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
   text-transform: uppercase;
   color: @special-dark-grey2;
+}
+
+.extra-item-quantity {
+  min-width: 50px;
+}
+
+.extra-item-price {
+  min-width: 40px;
+  margin-left: auto;
+}
+
+.extra-item-button {
+  width: 280px;
+
+  @media (min-width: @tablet-width) {
+    width: 633px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 244px;
+  }
+}
+
+.extra__gift {
+  background: url("../../img/gift-background.png") no-repeat;
+}
+
+.gift-text {
+  font-size: 16px;
+  line-height: 20px;
+  color: @basic-white;
 }
