@@ -1,6 +1,25 @@
+.copyright {
+  padding-top: 22px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    min-width: 163px;
+  }
+}
+
 .copyright__button {
   font-size: 16px;
   line-height: normal;
   text-decoration: none;
   color: @special-dark-grey;
+}
+
+.button-text {
+  @media (min-width: @tablet-width) {
+    padding: 9px 0;
+  }
 }
