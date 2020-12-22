@@ -4,6 +4,10 @@
   position: relative;
   min-height: 66px;
 
+  @media (max-width: @mobile-width-only) {
+    border-bottom: 1px solid @special-line-grey;
+  }
+
   @media (min-width: @tablet-width) {
     min-height: 103px;
     justify-content: space-between;
@@ -14,10 +18,6 @@
     padding-left: 110px;
     padding-right: 110px;
     min-height: 120px;
-    background-image: url("../../img/presentation-background.png");
-    background-repeat: no-repeat;
-    background-position: right top;
-    background-size: 696px;
   }
 }
 
@@ -156,6 +156,14 @@
   }
 }
 
+.desktop-no-index + .main-navigation__item {
+  @media (min-width: @desktop-width) {
+    &--current {
+      border-bottom: 2px solid @basic-green;
+    }
+  }
+}
+
 .list__link {
   display: block;
   width: 190px;
@@ -186,6 +194,20 @@
 
     &:active {
       color: @active-white;
+    }
+  }
+}
+
+.desktop-no-index > .list__link {
+  @media (min-width: @desktop-width) {
+    color: @basic-black;
+
+    &:hover {
+      color: @hover-black;
+    }
+
+    &:active {
+      color: @active-black;
     }
   }
 }
