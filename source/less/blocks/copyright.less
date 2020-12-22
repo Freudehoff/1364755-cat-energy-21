@@ -23,3 +23,23 @@
     padding: 9px 0;
   }
 }
+
+.button-icon:hover path {
+  fill: @basic-green;
+}
+
+.button-text:hover + .button-icon path {
+  fill: @basic-green;
+}
+
+.button-icon:active path {
+  fill: @active-green;
+}
+
+.button-text:active {
+  color: @active-dark-grey;
+}
+
+.button-text:active + .button-icon path {
+  fill: @active-green;
+}

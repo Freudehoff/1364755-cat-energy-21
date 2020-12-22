@@ -197,8 +197,18 @@
 
 .slider__before,
 .slider__after {
+  cursor: pointer;
+
   @media (min-width: @tablet-width) {
-    border-bottom: 1px dotted @basic-black;
+    border-bottom: 1px dotted @active-black;
+
+    &:hover {
+      border-bottom: 1px solid @active-black;
+    }
+
+    &:active {
+      border: none;
+    }
   }
 }
 
@@ -252,7 +262,7 @@
   height: 5px;
   padding: 0;
   border: 9px solid @basic-white;
-  outline: 1px solid @special-border-grey;
+  outline: 1px  @special-border-grey;
   background-color: @basic-green;
   border-radius: 50%;
   box-shadow: 0 2px @special-border-grey;
