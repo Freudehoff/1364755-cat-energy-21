@@ -1,23 +1,53 @@
 .catalog__title {
+  margin: 27px 0 41px 20px;
   font-size: 36px;
   font-weight: 400;
   line-height: 36px;
   color: @basic-black;
+
+  @media (min-width: @tablet-width) {
+    margin: 38px 0 164px 30px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 68px 0 165px 110px;
+  }
 }
 
 .catalog__list {
   display: grid;
-  grid-template-columns: 280px;
+  grid-template-columns: 320px;
   grid-template-rows: 1fr;
 
   @media (min-width: @tablet-width) {
+    padding: 0 30px;
     grid-template-columns: 324px 324px;
     gap: 140px 60px;
   }
 
   @media (min-width: @desktop-width) {
+    margin: 0 110px;
+    padding: 0;
     grid-template-columns: 245px 245px 245px 245px;
     gap: 144px 80px;
+  }
+}
+
+.catalog__item {
+  padding: 19px 20px 25px;
+  position: relative;
+  border-top: 1px solid @catalog-line;
+
+  @media (min-width: @tablet-width) {
+    padding: 161px 36px 40px;
+    border-top: none;
+    background-color: @basic-grey;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 162px 30px 40px 35px;
   }
 }
 
@@ -26,32 +56,204 @@
 }
 
 .catalog-item-title {
+  margin: 0;
+  width: 76px;
+  position: absolute;
+  top: 19px;
+  left: 160px;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
   color: @special-dark-greytwo;
+
+  @media (min-width: @tablet-width) {
+    margin: auto;
+    width: 150px;
+    position: static;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    line-height: 21px;
+  }
+}
+
+.catalog-item-image {
+  margin: 0;
+  width: 140px;
+  height: 112px;
+
+  @media (min-width: @tablet-width) {
+    width: 168px;
+    height: 200px;
+    position: absolute;
+    top: -73px;
+    left: 77px;
+  }
 }
 
 .catalog-item-table {
+  width: 142px;
+  position: absolute;
+  top: 78px;
+  left: 160px;
   font-size: 12px;
   line-height: 16px;
   color: @special-dark-grey;
+
+  @media (min-width: @tablet-width) {
+    border-collapse: collapse;
+    margin-top: 21px;
+    width: 251px;
+    position: static;
+    font-size: 16px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 173px;
+  }
+}
+
+.table-cell-one,
+.table-cell-two {
+  @media (min-width: @tablet-width) {
+    padding-top: 5px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid @special-border-grey;
+  }
+}
+
+.table-cell-two {
+  text-align: right;
+}
+
+.catalog-item-button {
+  width: 280px;
+  height: 40px;
+  margin-top: 13px;
+  font-size: 16px;
+  line-height: 20px;
+
+  &:hover {
+    background-color: @basic-green-two;
+  }
+
+  &:active {
+    color: @active-white;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 248px;
+    height: 39px;
+    margin-top: 33px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 168px;
+    height: 40px;
+  }
+}
+
+.plus-item {
+  padding: 78px 20px 25px 20px;
+  border-bottom: 1px solid @catalog-line;
+
+  @media (min-width: @tablet-width) {
+    padding: 161px 0 38px;
+    background-color: @basic-white;
+    border: 2px solid @basic-grey;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 160px 0 40px;
+  }
 }
 
 .plus-title {
+  position: static;
+  margin: auto;
+  width: 204px;
   color: @special-black;
+
+  &::before {
+    content: "";
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 25px;
+    left: 145px;
+    background-image: url("../img/plus.svg");
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+    width: 134px;
+
+    &::before {
+      width: 60px;
+      height: 60px;
+      top: 52px;
+      left: 132px;
+      background-image: url("../img/plus_tablet.svg");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    line-height: 22px;
+
+    &::before {
+      top: 51px;
+      left: 92px;
+    }
+  }
 }
 
 .plus-text {
+  width: 221px;
+  margin: 8px auto 0;
   font-size: 12px;
   line-height: 16px;
+
+  @media (min-width: @tablet-width) {
+    width: 167px;
+    margin: 23px auto 0;
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+  }
 }
 
 .plus-button {
+  display: block;
+  margin-top: 21px;
+  padding: 10px 94px;
   font-size: 16px;
   text-transform: uppercase;
   text-decoration: none;
   color: @special-dark-grey;
   background-color: @basic-grey;
+
+  &:hover {
+    background-color: @catalog-line;
+  }
+
+  &:active {
+    color: @active-dark-grey;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 87px auto 0;
+    width: 249px;
+    padding: 11px 0;
+    text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 169px;
+  }
 }
