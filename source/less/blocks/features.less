@@ -20,6 +20,7 @@
   color: @basic-black;
 
   @media (min-width: @tablet-width) {
+    margin: 0 0 72px;
     font-size: 60px;
     line-height: 60px;
   }
@@ -48,15 +49,142 @@
   &:last-child {
     padding: 0;
   }
+
+  @media (min-width: @tablet-width) {
+    padding: 0 0 104px;
+
+    &:first-child {
+      background: url("../../img/one.png") no-repeat 50% 0;
+    }
+
+    &:nth-child(2) {
+      background: url("../../img/two.png") no-repeat 50% 0;
+    }
+
+    &:nth-child(3) {
+      background: url("../../img/three.png") no-repeat 50% 0;
+    }
+
+    &:last-child {
+      padding: 0 0 104px;
+      background: url("../../img/four.png") no-repeat 50% 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:first-child {
+      background: url("../../img/one.png") no-repeat 75% 0;
+    }
+
+    &:nth-child(2) {
+      background: url("../../img/two.png") no-repeat 95% 0;
+    }
+
+    &:nth-child(3) {
+      background: url("../../img/three.png") no-repeat 95% 0;
+    }
+
+    &:last-child {
+      padding: 0 0 104px;
+      background: url("../../img/four.png") no-repeat 100% 0;
+    }
+  }
 }
 
 .features__text {
-  width: 160px;
-  margin: 0;
+  position: relative;
+  width: 198px;
+  margin: 0 0 0 80px;
 
   @media (min-width: @tablet-width) {
     width: 245px;
+    margin-top: 111px;
+    margin-left: 0;
     font-size: 16px;
     line-height: 24px;
+  }
+}
+
+.features__icon-one {
+  &::before {
+    content: "";
+    position: absolute;
+    left: -80px;
+    width: 60px;
+    height: 60px;
+    background: url("../img/healthy_icon.png");
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      top: -111px;
+      left: 0;
+      width: 80px;
+      height: 80px;
+      background-position: 50% 50%;
+    }
+  }
+}
+
+.features__icon-two {
+  &::before {
+    content: "";
+    position: absolute;
+    left: -80px;
+    width: 60px;
+    height: 60px;
+    background: url("../img/fast_icon.png");
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      top: -111px;
+      left: 0;
+      width: 80px;
+      height: 80px;
+      background-position: 50% 50%;
+    }
+  }
+}
+
+.features__icon-three {
+  &::before {
+    content: "";
+    position: absolute;
+    left: -80px;
+    width: 60px;
+    height: 60px;
+    background: url("../img/periodically_icon.png");
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      top: -111px;
+      left: 0;
+      width: 80px;
+      height: 80px;
+      background-position: 50% 50%;
+    }
+  }
+}
+
+.features__icon-four {
+  &::before {
+    content: "";
+    position: absolute;
+    left: -80px;
+    width: 60px;
+    height: 60px;
+    background: url("../img/result_icon.png");
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      top: -111px;
+      left: 0;
+      width: 80px;
+      height: 80px;
+      background-position: 50% 50%;
+    }
   }
 }

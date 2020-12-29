@@ -1,8 +1,55 @@
 .extra__title {
+  position: relative;
+  width: 226px;
+  margin: 25px 0 0 0;
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
   color: @basic-black;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    right: -75px;
+    width: 51px;
+    border: 1px solid @basic-green;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 338px;
+    margin: 68px 0 0 36px;
+    font-size: 36px;
+    line-height: 36px;
+
+    &::before {
+      top: 20px;
+      left: 375px;
+      width: 326px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 20px;
+      left: -66px;
+      width: 28px;
+      border: 1px solid @basic-green;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 76px 0 0 0;
+
+    &::before {
+      width: 955px;
+    }
+
+    &::after {
+      left: -110px;
+      width: 68px;
+    }
+  }
 }
 
 .extra__wrapper {
@@ -12,14 +59,58 @@
 }
 
 .extra__list {
-  line-height: 14px;
+  margin-top: 36px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 80px;
+    border: 1px solid @special-border-grey;
+    box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 896px;
+    margin-top: 81px;
+    margin-bottom: 86px;
+    border: none;
+  }
 }
 
 .extra-list-item {
+  padding-top: 13px;
+  padding-bottom: 19px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
+  border-top: 1px solid @special-border-grey;
+
+  &:last-child {
+    border-bottom: 1px solid @special-border-grey;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 26px 38px 28px;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+
+    &:last-child {
+      border-bottom: 1px solid @special-border-grey;
+    }
+
+    &:first-child {
+      border-top: 1px solid @special-border-grey;
+    }
+  }
 }
 
 .extra-link {
@@ -27,42 +118,137 @@
 }
 
 .extra-item-title {
-  min-width: 280px;
+  width: 130px;
   margin: 0;
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
   text-transform: uppercase;
   color: @special-dark-greytwo;
+
+  @media (min-width: @tablet-width) {
+    width: 163px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 25px 0;
+  }
 }
 
 .extra-item-quantity {
-  min-width: 50px;
+  margin-top: 13px;
+  width: 126px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    margin-left: 244px;
+    width: 132px;
+    font-size: 16px;
+    text-align: right;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 29px 0 24px 163px;
+  }
 }
 
 .extra-item-price {
-  min-width: 40px;
+  margin-top: 13px;
+  width: 60px;
+  text-align: right;
   margin-left: auto;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 29px 0 24px 112px;
+  }
 }
 
 .extra-item-button {
   width: 280px;
+  height: 40px;
+  margin-top: 15px;
+  font-size: 16px;
+  line-height: 20px;
+
+  &:hover {
+    background-color: @basic-green-two;
+  }
+
+  &:active {
+    color: @active-white;
+  }
 
   @media (min-width: @tablet-width) {
+    margin-top: 26px;
     width: 633px;
   }
 
   @media (min-width: @desktop-width) {
+    margin: 16px 0 17px auto;
     width: 244px;
   }
 }
 
 .extra__gift {
+  position: relative;
+  padding-top: 186px;
+  padding-bottom: 43px;
   background: url("../img/gift-background.png") no-repeat;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 69px;
+    margin-bottom: 76px;
+    padding-top: 71px;
+    padding-bottom: 69px;
+    width: 708px;
+    background: url("../img/gift-photo-tablet.jpg") no-repeat;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 80px 0 86px 79px;
+    padding: 185px 0 42px;
+    width: 245px;
+    background: url("../img/gift-photo-desktop.jpg");
+  }
 }
 
 .gift-text {
+  width: 161px;
+  margin: auto;
+  text-align: center;
   font-size: 16px;
   line-height: 20px;
   color: @basic-white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 58px;
+    left: 101px;
+    width: 78px;
+    height: 80px;
+    background: url("../img/icon_gift.svg");
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 0 423px;
+    text-align: start;
+
+    &::before {
+      left: 80px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: auto;
+    text-align: center;
+  }
 }
