@@ -38,7 +38,7 @@
 }
 
 .specification-option:not(:last-child) {
-  margin-bottom: 14px;
+  margin-bottom: 15px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 20px;
@@ -68,7 +68,7 @@
     padding-left: 15px;
     margin-left: 10px;
     width: 213px;
-    height: 46px;
+    height: 43px;
 
     @media (min-width: @tablet-width) {
       padding-left: 19px;
@@ -86,9 +86,9 @@
 
   &[id="weight"] {
     padding-left: 16px;
-    margin-left: 11px;
+    margin-left: 13px;
     width: 188px;
-    height: 45px;
+    height: 44px;
 
     @media (min-width: @tablet-width) {
       padding-left: 19px;
@@ -104,7 +104,7 @@
 
   &[id="age"] {
     padding-left: 16px;
-    margin-left: 10px;
+    margin-left: 11px;
     width: 156px;
     height: 45px;
 
@@ -126,18 +126,18 @@
     padding-left: 15px;
     margin-left: 7px;
     width: 204px;
-    height: 45px;
+    height: 44px;
 
     @media (min-width: @tablet-width) {
       padding-left: 21px;
       margin-left: 15px;
       width: 529px;
-      height: 52px;
+      height: 50px;
     }
 
     @media (min-width: @desktop-width) {
       padding-left: 19px;
-      margin-left: 16px;
+      margin-left: 17px;
       width: 467px;
     }
   }
@@ -185,7 +185,7 @@
 
 .wish {
   margin-top: 24px;
-  padding: 28px 20px 24px 65px;
+  padding: 28px 20px 22px 65px;
   border-top: 1px solid @special-line-grey;
   border-bottom: 1px solid @special-line-grey;
   color: @special-dark-greytwo;
@@ -203,7 +203,7 @@
     margin-top: 0;
     margin-left: 0;
     margin-right: 110px;
-    padding: 30px 0 34px 88px;
+    padding: 30px 0 30px 88px;
   }
 }
 
@@ -224,7 +224,7 @@
 .form__option-radio + label::before {
   content: "";
   position: absolute;
-  top: -5px;
+  top: -7px;
   left: -45px;
   width: 30px;
   height: 30px;
@@ -233,7 +233,7 @@
   box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
-    left: -65px;
+    left: -60px;
     width: 40px;
     height: 40px;
   }
@@ -254,7 +254,7 @@
 .form__option-radio:checked + label::after {
   content: "";
   position: absolute;
-  top: -5px;
+  top: -7px;
   left: -45px;
   width: 14px;
   height: 14px;
@@ -264,7 +264,7 @@
   box-shadow: 0 0 0 1px @special-border-grey;
 
   @media (min-width: @tablet-width) {
-    left: -65px;
+    left: -60px;
     width: 18px;
     height: 18px;
     border: 11px solid @basic-white;
@@ -313,10 +313,11 @@
   &::before {
     content: "";
     position: absolute;
-    top: 13px;
-    right: -115px;
-    width: 97px;
+    top: 15px;
+    left: 200px;
+    width: 1000px;
     border: 1px solid @basic-green;
+    box-sizing: border-box;
   }
 
   @media (min-width: @tablet-width) {
@@ -325,17 +326,18 @@
 
     &::before {
       top: 20px;
-      right: -186px;
-      width: 143px;
+      left: 550px;
+      width: 2000px;
     }
 
     &::after {
       content: "";
       position: absolute;
       top: 20px;
-      left: -70px;
-      width: 28px;
+      right: 553px;
+      width: 30px;
       border: 1px solid @basic-green;
+      box-sizing: border-box;
     }
   }
 
@@ -376,12 +378,26 @@
   position: absolute;
   top: 16px;
   right: 15px;
+
+  @media (min-width: @desktop-width) {
+    right: 17px;
+  }
 }
 
 .icon_phone {
   position: absolute;
-  top: 16px;
-  right: 15px;
+  top: 13px;
+  right: 13px;
+
+  @media (min-width: @tablet-width) {
+    top: 15px;
+    right: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 13px;
+    right: 14px;
+  }
 }
 
 .form-comment {
@@ -392,7 +408,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 69px;
+    padding-top: 66px;
   }
 }
 
@@ -400,41 +416,43 @@
   display: block;
   position: relative;
   width: 140px;
-  margin-bottom: 37px;
+  margin-bottom: 20px;
 
   &::before {
     content: "";
     position: absolute;
-    top: 13px;
-    right: -163px;
-    width: 156px;
+    top: 16px;
+    left: 140px;
+    width: 1000px;
     border: 1px solid @basic-green;
+    box-sizing: border-box;
   }
 
   @media (min-width: @tablet-width) {
     width: 182px;
-    margin-bottom: 76px;
+    margin-bottom: 58px;
 
     &::before {
-      top: 20px;
-      right: -520px;
-      width: 476px;
+      top: 21px;
+      left: -70px;
+      width: 30px;
     }
 
     &::after {
       content: "";
       position: absolute;
-      top: 20px;
-      left: -70px;
-      width: 28px;
+      top: 21px;
+      left: 220px;
+      width: 2000px;
       border: 1px solid @basic-green;
+      box-sizing: border-box;
     }
   }
 
   @media (min-width: @desktop-width) {
     &::before {
-      right: -1150px;
-      width: 1106px;
+      left: 220px;
+      width: 1108px;
     }
 
     &::after {
@@ -470,7 +488,7 @@
 }
 
 .form-additionally {
-  padding-top: 23px;
+  padding-top: 15px;
   color: @basic-black;
 
   @media (min-width: @tablet-width) {
@@ -478,7 +496,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 67px;
+    padding-top: 64px;
   }
 }
 
@@ -491,20 +509,21 @@
   &::before {
     content: "";
     position: absolute;
-    top: 13px;
-    right: -140px;
-    width: 134px;
+    top: 15px;
+    left: 165px;
+    width: 1000px;
     border: 1px solid @basic-green;
+    box-sizing: border-box;
   }
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 62px;
+    margin-bottom: 60px;
     width: 211px;
 
     &::before {
       top: 20px;
-      right: -490px;
-      width: 444px;
+      left: 250px;
+      width: 2000px;
     }
 
     &::after {
@@ -512,8 +531,9 @@
       position: absolute;
       top: 20px;
       left: -70px;
-      width: 28px;
+      width: 30px;
       border: 1px solid @basic-green;
+      box-sizing: border-box;
     }
   }
 
@@ -586,6 +606,7 @@
   width: 30px;
   height: 30px;
   border: 1px solid @special-border-grey;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     left: -59px;
@@ -611,6 +632,7 @@
   height: 30px;
   background: url("../img/checkbox_checked.svg") no-repeat 50% 50%;
   border: 1px solid @special-border-grey;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     left: -59px;
@@ -622,11 +644,12 @@
 .form__option-checkbox:checked:disabled + label::after {
   background: url("../img/checkbox_disabled.svg") no-repeat 50% 50%;
   border: 1px solid @radio-disabled;
+  box-sizing: border-box;
 }
 
 .form__button {
   display: block;
-  margin: 41px auto 0;
+  margin: 35px auto 0;
   width: 280px;
   height: 40px;
   font-size: 16px;
@@ -662,13 +685,13 @@
   color: @basic-black;
 
   @media (min-width: @tablet-width) {
-    margin: 0 0 0 61px;
+    margin: 0 0 0 59px;
     width: 180px;
     display: inline-block;
     font-size: 16px;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 0 0 0 81px;
+    margin: 0 0 0 79px;
   }
 }

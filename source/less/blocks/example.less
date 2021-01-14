@@ -289,8 +289,16 @@
   height: 8px;
   padding: 0;
   border: 11px solid @basic-white;
-  outline: 1px  @special-border-grey;
   background-color: @basic-green;
   border-radius: 50%;
-  box-shadow: 0 2px @special-border-grey;
+  box-shadow:
+    0 0 0 1px @special-border-grey,
+    0 2px @special-border-grey;
+  cursor: pointer;
+
+  &:active {
+    box-shadow:
+    0 0 0 1px @basic-green,
+    0 2px @special-border-grey;
+  }
 }
