@@ -37,6 +37,18 @@
   }
 }
 
+.logo-adaptive {
+  @media (min-width: @desktop-width) {
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+}
+
 .page-header__logo-second {
   margin: 24px 0 20px 0;
 
@@ -144,6 +156,7 @@
     border: none;
 
     &:last-child {
+      padding-bottom: 10px;
       margin: 0;
     }
 
@@ -156,6 +169,11 @@
     height: 24px;
     font-size: 20px;
     line-height: normal;
+
+    &:last-child {
+      padding-bottom: 13px;
+      margin: 0;
+    }
 
     &--current {
       border-bottom: 2px solid @basic-white;
