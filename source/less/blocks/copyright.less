@@ -1,9 +1,5 @@
 .copyright {
   padding-top: 22px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
 
   @media (min-width: @tablet-width) {
     padding: 0;
@@ -11,14 +7,10 @@
   }
 }
 
-.copyright__button {
+.button-text {
   font-size: 16px;
   line-height: normal;
-  text-decoration: none;
   color: @special-dark-grey;
-}
-
-.button-text {
   padding: 6px 0 0 0;
 
   @media (min-width: @tablet-width) {
@@ -26,22 +18,27 @@
   }
 }
 
-.button-icon:hover path {
-  fill: @basic-green;
+.copyright__button {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.button-text:hover + .button-icon path {
-  fill: @basic-green;
+.button-icon-wrapper {
+  width: 27px;
+  height: 34px;
 }
 
-.button-icon:active path {
-  fill: @active-green;
-}
+.button-icon {
+  color: @special-grey2;
 
-.button-text:active {
-  color: @active-dark-grey;
-}
-
-.button-text:active + .button-icon path {
-  fill: @active-green;
+  &:hover {
+    color: @basic-green;
+  }
 }
