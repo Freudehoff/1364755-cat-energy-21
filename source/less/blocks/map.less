@@ -2,4 +2,34 @@
   width: 320px;
   height: 362px;
   background-color: @special-dark-grey;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    height: 400px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+  }
+}
+
+.map__location {
+  position: absolute;
+  z-index: 1;
+}
+
+.map__place {
+  position: absolute;
+  width: 320px;
+  height: 362px;
+  z-index: 2;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+    height: 400px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1440px;
+  }
 }
