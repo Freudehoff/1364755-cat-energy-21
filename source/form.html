@@ -137,7 +137,7 @@
           </p>
           <p class="form__option contacts-option">
             <label class="form__option-title" for="tel">Телефон:*</label>
-            <input class="form__option-field" type="tel" name="contact" id="tel" value="8 (960) 900-60-90" required>
+            <input class="form__option-field" type="tel" name="contact" id="tel" value="8 (960) 900-60-90" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18" required>
             <svg class="icon_phone" width="20" height="21">
               <use xlink:href="#icon-phone"></use>
             </svg>
