@@ -5,14 +5,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Каталог продукции</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/oswaldmedium.woff" as="font">
   <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
   <link rel="preload" href="fonts/oswaldregular.woff" as="font">
   <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
 </head>
 
-<body class="page__body desktop-no-index">
+<body class="body desktop-no-index">
 
   <svg style="display: none">
     <symbol viewBox="0 0 128 24" id="footer-logo">
@@ -58,7 +58,7 @@
     <a class="page-header__logo-second" href="index.html">
       <img src="img/logo_two.svg" width="101" height="18" alt="Интернет магазин «Кэт энерджи»">
     </a>
-    <nav class="main-navigation main-navigation--closed main-navigation--nojs">
+    <nav class="main-navigation main-navigation--open main-navigation--nojs">
       <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <ul class="main-navigation__list list">
         <li class="main-navigation__item desktop-no-index">
@@ -104,7 +104,7 @@
               <td class="table-cell-two">700 Р.</td>
             </tr>
           </table>
-          <button class="catalog-item-button button" type="button">Заказать</button>
+          <a class="catalog-item-button button" href="#">Заказать</a>
         </li>
         <li class="catalog__item">
           <a class="catalog-link" href="#">
@@ -133,7 +133,7 @@
               <td class="table-cell-two">1000 Р.</td>
             </tr>
           </table>
-          <button class="catalog-item-button button" type="button">Заказать</button>
+          <a class="catalog-item-button button" href="#">Заказать</a>
         </li>
         <li class="catalog__item">
           <a class="catalog-link" href="#">
@@ -162,7 +162,7 @@
               <td class="table-cell-two">700 Р.</td>
             </tr>
           </table>
-          <button class="catalog-item-button button" type="button">Заказать</button>
+          <a class="catalog-item-button button" href="#">Заказать</a>
         </li>
         <li class="catalog__item">
           <a class="catalog-link" href="#">
@@ -191,7 +191,7 @@
               <td class="table-cell-two">1000 Р.</td>
             </tr>
           </table>
-          <button class="catalog-item-button button" type="button">Заказать</button>
+          <a class="catalog-item-button button" href="#">Заказать</a>
         </li>
         <li class="catalog__item">
           <a class="catalog-link" href="#">
@@ -220,7 +220,7 @@
               <td class="table-cell-two">400 Р.</td>
             </tr>
           </table>
-          <button class="catalog-item-button button" type="button">Заказать</button>
+          <a class="catalog-item-button button" href="#">Заказать</a>
         </li>
         <li class="catalog__item">
           <a class="catalog-link" href="#">
@@ -249,7 +249,7 @@
               <td class="table-cell-two">700 Р.</td>
             </tr>
           </table>
-          <button class="catalog-item-button button" type="button">Заказать</button>
+          <a class="catalog-item-button button" href="#">Заказать</a>
         </li>
         <li class="catalog__item">
           <a class="catalog-link" href="#">
@@ -278,7 +278,7 @@
               <td class="table-cell-two">500 Р.</td>
             </tr>
           </table>
-          <button class="catalog-item-button button" type="button">Заказать</button>
+          <a class="catalog-item-button button" href="#">Заказать</a>
         </li>
         <li class="catalog__item plus-item">
           <h2 class="catalog-item-title plus-title">Показать еще 100500 товаров</h2>
@@ -332,9 +332,9 @@
     </section>
   </main>
   <footer class="page-footer">
-    <section class="contacts container">
+    <section class="contacts container catalog-contact">
       <h2 class="contacts__heading">Приглашаем <br> к сотрудничеству дилеров!</h2>
-      <p class="contacts__text text-content">ул. Большая<br> Конюшенная, д. 19/8 Санкт-Петербург</p>
+      <p class="contacts__text text-content">ул. Большая<br> Конюшенная, д. 19/8 <span class="city">Санкт-Петербург</span></p>
     </section>
     <section class="map">
       <h2 class="visually-hidden">Карта</h2>
@@ -347,12 +347,12 @@
         <source media="(min-width: 768px)" srcset="img/location_tablet.jpg 1x, img/location_tablet@2x.jpg 2x">
         <img class="map__location" src="img/location_mobile.jpg" srcset="img/location_mobile@2x.jpg 2x" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
       </picture>
-      <iframe class="map__place" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003165!2d30.320858716173472!3d59.938719169054075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1610883157987!5m2!1sru!2sru" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      <iframe class="map__place" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003165!2d30.320858716173472!3d59.938719169054075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1610883157987!5m2!1sru!2sru" style="border: 0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </section>
     <div class="page-footer__wrapper container">
       <a class="page-footer__logo">
         <svg class="footer-logo" role="img" aria-label="Интернет магазин «Кэт энерджи»" width="128" height="24">
-          <use xlink:href="#footer-logo">
+          <use xlink:href="#footer-logo"></use>
         </svg>
       </a>
       <section class="social">
@@ -392,7 +392,7 @@
       </section>
     </div>
   </footer>
-  <script src="js/script.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>

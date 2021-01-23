@@ -7,3 +7,32 @@
   color: @special-dark-grey;
   background-color: @basic-white;
 }
+
+.body {
+  min-height: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    max-width: 768px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 1440px;
+    background-image: url("../img/presentation-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 720px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/presentation-desktop@2x.jpg");
+    }
+  }
+}
+
+.desktop-no-index {
+  @media (min-width: @desktop-width) {
+    background: none;
+  }
+}
+

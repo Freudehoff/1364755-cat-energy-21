@@ -22,7 +22,7 @@
     width: 550px;
     margin-right: 20px;
     padding-right: 0;
-    padding-bottom: 75px;
+    padding-bottom: 70px;
   }
 }
 
@@ -152,8 +152,9 @@
   }
 
   @media (min-width: @desktop-width) {
+    padding-top: 0;
     min-width: 324px;
-    margin: 30px 0 0 0;
+    margin: 50px 0 0 0;
     text-align: start;
   }
 }
@@ -161,6 +162,10 @@
 .cost-number {
   @media (min-width: @tablet-width) {
     line-height: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 55px;
   }
 }
 
@@ -187,34 +192,34 @@
   }
 }
 
-.slider__image {
+.example__slider__image {
   margin-bottom: 33px;
 
   @media (min-width: @tablet-width) {
     position: absolute;
-    top: -190px;
+    top: -192px;
     left: 30px;
   }
 
   @media (min-width: @desktop-width) {
-    top: 0;
+    top: -10px;
     left: -20px;
   }
 }
 
-.slider__wrapper {
+.example__slider__wrapper {
   @media (min-width: @desktop-width) {
     width: 576px;
-    margin-top: 570px;
+    margin-top: 563px;
     margin-left: 80px;
   }
 }
 
-.slider__before {
+.slider-before {
   margin-left: 63px;
 
   @media (min-width: @tablet-width) {
-    margin-left: 100px;
+    margin-left: 99px;
   }
 
   @media (min-width: @desktop-width) {
@@ -222,12 +227,16 @@
   }
 }
 
-.slider__after {
+.slider-after {
   margin: 0 0 0 13px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 0 22px;
+  }
 }
 
-.slider__before,
-.slider__after {
+.slider-before,
+.slider-after {
   cursor: pointer;
 
   @media (min-width: @tablet-width) {
@@ -243,7 +252,7 @@
   }
 }
 
-.slider__line {
+.slider-line {
   display: inline-block;
   width: 84px;
   height: 14px;
@@ -266,13 +275,13 @@
   border-radius: 6px;
 }
 
-.slider__scale {
+.slider-scale {
   @media (max-width: @mobile-width-only) {
     display: none;
   }
 
   @media (min-width: @tablet-width) {
-    margin-top: 374px;
+    margin-top: 372px;
     margin-left: 20px;
     display: inline-block;
     position: relative;
@@ -306,5 +315,10 @@
     box-shadow:
       0 0 0 1px @basic-green,
       0 2px @special-border-grey;
+  }
+
+  @media (min-width: @tablet-width) {
+    top: -12px;
+    left: 47%;
   }
 }

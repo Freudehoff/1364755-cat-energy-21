@@ -5,20 +5,27 @@
   justify-content: space-between;
   padding-top: 30px;
   padding-bottom: 25px;
-  background-color: @basic-grey;
+  background-color: @basic-white;
 
   @media (min-width: @tablet-width) {
-    padding: 66px 71px 60px;
+    padding: 64px 71px 45px;
     justify-content: space-between;
   }
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    padding: 66px 89px 51px 76px;
-    top: 95px;
+    padding: 66px 83px 47px 76px;
+    top: 93px;
     left: 110px;
-    background-color: @basic-white;
     z-index: 3;
+  }
+}
+
+.catalog-contact {
+  background-color: @basic-grey;
+
+  @media (min-width: @desktop-width) {
+    background-color: @basic-white;
   }
 }
 
@@ -49,8 +56,14 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-left: 87px;
+    margin-left: 80px;
     text-align: start;
+  }
+}
+
+.city {
+  @media (min-width: @tablet-width) {
+    line-height: 50px;
   }
 }
 

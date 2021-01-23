@@ -5,18 +5,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Подбор программы</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/oswaldmedium.woff" as="font">
   <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
   <link rel="preload" href="fonts/oswaldregular.woff" as="font">
   <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
 </head>
 
-<body class="page__body desktop-no-index">
+<body class="body desktop-no-index">
 
   <svg style="display: none">
     <symbol viewBox="0 0 128 24" id="footer-logo">
-      <g clip-path="url(#clip0)">
+      <g clip-path="url(#clip1)">
         <path d="M1.60253 22.0513C0.468358 20.3682 -0.0946573 18.3503 3.016e-05 16.3077V7.79487C-0.137317 5.73031 0.390444 3.67661 1.50238 1.94872C2.6041 0.615385 4.30676 0 6.81067 0C9.31458 0 10.9171 0.615385 11.9187 1.74359C13.006 3.17255 13.5409 4.96181 13.421 6.76923V8.82051H8.51333V6.46154C8.55297 5.76385 8.45065 5.06533 8.21286 4.41026C8.08576 4.14583 7.88431 3.9264 7.63443 3.78018C7.38455 3.63395 7.09766 3.56763 6.81067 3.58974C6.10958 3.58974 5.60879 3.79487 5.40848 4.30769C5.18191 5.03643 5.08025 5.79984 5.10801 6.5641V17.5385C5.05512 18.2799 5.19327 19.0227 5.50864 19.6923C5.70895 20.2051 6.20973 20.4103 6.91083 20.4103C7.61192 20.4103 8.01255 20.2051 8.21286 19.6923C8.44058 18.9992 8.54242 18.2692 8.51333 17.5385V15.0769H13.421V17.1282C13.5229 18.9651 12.9911 20.7803 11.9187 22.2564C10.9171 23.4872 9.21443 24.1026 6.81067 24.1026C4.40692 24 2.6041 23.3846 1.60253 22.0513Z" fill="#111111"/>
         <path d="M19.3302 0.307617H25.0391L29.2457 23.6922H24.6385L23.8372 18.7692H20.5321L19.7308 23.6922H15.0235L19.3302 0.307617ZM23.4366 15.6922L22.2347 6.56403L21.0329 15.6922H23.4366Z" fill="#111111"/>
         <path d="M32.7512 4.20505H29.3459V0.307617H41.2645V4.10249H37.8592V23.6922H32.7512V4.20505Z" fill="#111111"/>
@@ -28,7 +28,7 @@
         <path d="M119.987 15.4871L115.08 0.410156H118.084L121.59 11.6922L124.995 0.410156H128L123.092 15.4871V23.6922H120.088V15.4871H119.987Z" fill="#111111"/>
       </g>
       <defs>
-        <clipPath id="clip0">
+        <clipPath id="clip1">
           <rect width="128" height="24" fill="white"/>
         </clipPath>
       </defs>
@@ -76,7 +76,7 @@
     <a class="page-header__logo-second" href="index.html">
       <img src="img/logo_two.svg" width="101" height="18" alt="Интернет магазин «Кэт энерджи»">
     </a>
-    <nav class="main-navigation main-navigation--closed main-navigation--nojs">
+    <nav class="main-navigation main-navigation--open main-navigation--nojs">
       <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <ul class="main-navigation__list list">
         <li class="main-navigation__item desktop-no-index">
@@ -146,7 +146,7 @@
       </div>
       <div class="form__item form-comment container">
         <label class="form__item-title title-comment" for="comment">Комментарий</label><br>
-        <textarea class="form__item-field field-comment" name="comment" id="comment" cols="43" rows="8">Расскажите обо всех повадках кота</textarea>
+        <textarea class="form__item-field field-comment" name="comment" id="comment" cols="43" rows="8" placeholder="Расскажите обо всех повадках кота"></textarea>
       </div>
       <div class="form__item form-additionally container">
         <span class="form__item-title title-additionally">Дополнительно</span>
@@ -174,9 +174,9 @@
     </form>
   </main>
   <footer class="page-footer">
-    <section class="contacts container">
+    <section class="contacts container catalog-contact">
       <h2 class="contacts__heading">Приглашаем <br> к сотрудничеству дилеров!</h2>
-      <p class="contacts__text text-content">ул. Большая<br> Конюшенная, д. 19/8 Санкт-Петербург</p>
+      <p class="contacts__text text-content">ул. Большая<br> Конюшенная, д. 19/8 <span class="city">Санкт-Петербург</span></p>
     </section>
     <section class="map">
       <h2 class="visually-hidden">Карта</h2>
@@ -189,12 +189,12 @@
         <source media="(min-width: 768px)" srcset="img/location_tablet.jpg 1x, img/location_tablet@2x.jpg 2x">
         <img class="map__location" src="img/location_mobile.jpg" srcset="img/location_mobile@2x.jpg 2x" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
       </picture>
-      <iframe class="map__place" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003165!2d30.320858716173472!3d59.938719169054075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1610883157987!5m2!1sru!2sru" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      <iframe class="map__place" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003165!2d30.320858716173472!3d59.938719169054075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1610883157987!5m2!1sru!2sru" style="border: 0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </section>
     <div class="page-footer__wrapper container">
       <a class="page-footer__logo">
         <svg class="footer-logo" role="img" aria-label="Интернет магазин «Кэт энерджи»" width="128" height="24">
-          <use xlink:href="#footer-logo">
+          <use xlink:href="#footer-logo"></use>
         </svg>
       </a>
       <section class="social">
@@ -234,7 +234,7 @@
       </section>
     </div>
   </footer>
-  <script src="js/script.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>
