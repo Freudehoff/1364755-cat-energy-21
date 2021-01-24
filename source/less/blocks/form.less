@@ -243,10 +243,6 @@
   border: 1px solid @radio-hover;
 }
 
-.form__option-radio:focus + label::before {
-  border: 1px solid @basic-black;
-}
-
 .form__option-radio:disabled + label::before {
   border: 1px solid @radio-disabled;
 }
@@ -254,6 +250,11 @@
 .form__option-radio:disabled + .wish-title {
   color: @radio-disabledtwo;
 }
+
+.form__option-radio:focus + label::before {
+  border: 1px solid @basic-black;
+}
+
 
 .form__option-radio:checked + label::after {
   content: "";
@@ -285,7 +286,7 @@
 }
 
 .form__option-radio:checked:focus + label::after {
-  border: 1px solid @basic-black;
+  box-shadow: 0 0 0 1px @basic-black;
 }
 
 .form__item-title {
@@ -662,6 +663,10 @@
   background: url("../img/checkbox_disabled.svg") no-repeat 50% 50%;
   border: 1px solid @radio-disabled;
   box-sizing: border-box;
+}
+
+.form__option-checkbox:checked:focus + label::after {
+  border: 1px solid @basic-black;
 }
 
 .form__button {
