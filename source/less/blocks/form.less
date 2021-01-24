@@ -243,6 +243,10 @@
   border: 1px solid @radio-hover;
 }
 
+.form__option-radio:focus + label::before {
+  border: 1px solid @basic-black;
+}
+
 .form__option-radio:disabled + label::before {
   border: 1px solid @radio-disabled;
 }
@@ -278,6 +282,10 @@
 .form__option-radio:checked:disabled + label::after {
   background-color: @active-green;
   box-shadow: 0 0 0 1px @radio-disabled;
+}
+
+.form__option-radio:checked:focus + label::after {
+  border: 1px solid @basic-black;
 }
 
 .form__item-title {
@@ -624,6 +632,10 @@
   color: @active-black;
 }
 
+.form__option-checkbox:focus + label::before {
+  border: 1px solid @basic-black;
+}
+
 .form__option-checkbox:checked + label::after {
   content: "";
   position: absolute;
@@ -640,6 +652,10 @@
     width: 40px;
     height: 40px;
   }
+}
+
+.form__option-checkbox:hover + label::after {
+  border: 1px solid @radio-hover;
 }
 
 .form__option-checkbox:checked:disabled + label::after {

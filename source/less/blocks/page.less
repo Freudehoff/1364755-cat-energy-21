@@ -10,15 +10,15 @@
 
 .body {
   min-height: 100%;
-  max-width: 320px;
+  max-width: @mobile-width;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    max-width: 768px;
+    max-width: @tablet-width;
   }
 
   @media (min-width: @desktop-width) {
-    max-width: 1440px;
+    max-width: @desktop-width;
     background-image: url("../img/presentation-desktop.jpg");
     background-repeat: no-repeat;
     background-position: right top;

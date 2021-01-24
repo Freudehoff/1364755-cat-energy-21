@@ -311,10 +311,16 @@
     0 2px @special-border-grey;
   cursor: pointer;
 
+  &:hover {
+    box-shadow:
+      0 0 0 1px @special-border-grey,
+      0 2px 4px @special-border-grey;
+  }
+
   &:active {
     box-shadow:
       0 0 0 1px @basic-green,
-      0 2px @special-border-grey;
+      0 2px 4px @special-border-grey;
   }
 
   @media (min-width: @tablet-width) {
