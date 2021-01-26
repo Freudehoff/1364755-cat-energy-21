@@ -37,7 +37,7 @@
   }
 }
 
-.logo-adaptive {
+.page-header__logo-adaptive {
   @media (min-width: @desktop-width) {
     &:hover {
       opacity: 0.8;
@@ -57,7 +57,7 @@
   }
 }
 
-.main-navigation__toggle {
+.page-header__main-navigation-toggle {
   padding: 0;
   position: absolute;
   top: 25px;
@@ -73,7 +73,7 @@
   }
 }
 
-.main-navigation--opened .main-navigation__toggle {
+.page-header__main-navigation--opened .page-header__main-navigation-toggle {
   &::before,
   &::after {
     content: "";
@@ -95,7 +95,7 @@
   }
 }
 
-.main-navigation--closed .main-navigation__toggle::before {
+.page-header__main-navigation--closed .page-header__main-navigation-toggle::before {
   content: "";
   position: absolute;
   top: 0;
@@ -106,21 +106,21 @@
   box-shadow: 0 8px 0 0 @basic-black, 0 16px 0 0 @basic-black;
 }
 
-.main-navigation--closed .main-navigation__list {
+.page-header__main-navigation--closed .page-header__main-navigation-list {
   @media (max-width: @mobile-width-only) {
     display: none;
   }
 }
 
-.main-navigation--nojs .main-navigation__toggle {
+.page-header__main-navigation--nojs .page-header__main-navigation-toggle {
   display: none;
 }
 
-.main-navigation--nojs .main-navigation__list {
+.page-header__main-navigation--nojs .page-header__main-navigation-list {
   display: block;
 }
 
-.main-navigation__list {
+.page-header__main-navigation-list {
   width: 320px;
   display: flex;
   flex-direction: column;
@@ -138,7 +138,7 @@
   }
 }
 
-.main-navigation__item {
+.page-header__main-navigation-item {
   padding: 22px 0 24px 0;
   font-size: 20px;
   line-height: 20px;
@@ -185,7 +185,7 @@
   }
 }
 
-.desktop-no-index + .main-navigation__item {
+.desktop-no-index + .page-header__main-navigation-item {
   @media (min-width: @desktop-width) {
     &--current {
       border-bottom: 2px solid @basic-green;
@@ -193,7 +193,7 @@
   }
 }
 
-.list__link {
+.page-header__link {
   display: block;
   width: 190px;
   height: 20px;
@@ -227,7 +227,7 @@
   }
 }
 
-.desktop-no-index > .list__link {
+.desktop-no-index > .page-header__link {
   @media (min-width: @desktop-width) {
     color: @basic-black;
 
