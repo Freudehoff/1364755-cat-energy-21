@@ -379,7 +379,7 @@
 
   @media (min-width: @desktop-width) {
     margin-bottom: 0;
-    margin-right: 80px;
+    margin-right: auto;
   }
 }
 
@@ -568,6 +568,10 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
   }
+
+  @media (min-width: @desktop-width) {
+    flex-wrap: nowrap;
+  }
 }
 
 .additionally-option {
@@ -586,7 +590,7 @@
     }
 
     &:nth-child(even) {
-      margin-left: 120px;
+      margin-left: auto;
     }
   }
 
